@@ -24,10 +24,10 @@
               .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
             
-            d3.json("/collatz.json", function( data) {
+            d3.json("https://raw.githubusercontent.com/KyahWill/collatz_conjecture_visualization/main/collatz.json", function( data) {
               console.log(data)
               // Initialize the links
-              var link = svg
+              var link = svg    
                 .selectAll("line")
                 .data(data.links)
                 .enter()

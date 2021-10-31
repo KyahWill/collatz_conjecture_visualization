@@ -12,7 +12,7 @@ for i in range(depth):
     for number in old_stack:
         if((number - 1 )%3 == 0 and ((number-1) /3) != 0 and ((number-1)/3) != 1):
             new_stack.append(int((number-1)/3))
-            outputs["links"].append({"source":number,"target":bin(int((number-1)/3))})
+            outputs["links"].append({"source":number,"target":(int((number-1)/3))})
             outputs["nodes"].append({"id":(number-1)/3,"name":bin(int((number-1)/3))})
         new_stack.append(number * 2)
         outputs["links"].append({"source":number,"target":(number*2)})
